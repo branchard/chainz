@@ -1,0 +1,28 @@
+{
+  "name": "chainz",
+  "version": "0.1.0",
+  "description": "Client-side Javascript templating engine",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/branchard/chainz.git"
+  },
+  "keywords": [
+    "javascript",
+    "templating",
+    "client",
+    "browser"
+  ],
+  "author": "branchard",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/branchard/chainz/issues"
+  },
+  "homepage": "https://github.com/branchard/chainz#readme"
+}

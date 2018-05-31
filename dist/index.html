@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Chainz</title>
+    <script src="chainz.js"></script>
+    <script>
+        let tree = {
+            tag: 'div',
+            id: 'my-id',
+            class: 'classe1 classe2',
+            myAttribut: 'my-value',
+            dataTest: 'ahah',
+            children: [
+                {
+                    tag: 'p',
+                    id: 'my-p',
+                    class: 'toto',
+                    style: {
+                        color: 'red'
+                    },
+                    children: [
+                        {
+                            tag: 'div',
+                            id: 'my-id',
+                            class: 'toto',
+                            style: {
+                                color: 'green',
+                                marginBottom: '16px'
+                            },
+                            children: [
+                                'Test 1'
+                            ]
+                        },
+                        {
+                            tag: 'div',
+                            id: 'my-id',
+                            class: 'toto',
+                            style: {
+                                color: 'blue',
+                                border: 'solid 1px purple',
+                                padding: '5px'
+                            },
+                            children: [
+                                {
+                                    tag: 'p',
+                                    id: 'toto',
+                                    children: [
+                                        'Test 2'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    tag: 'span',
+                    id: 'my-id',
+                    class: 'toto',
+                    style: {
+                        color: 'red',
+                    },
+                    children: [
+                        'Test 3'
+                    ]
+                }
+            ]
+        };
+
+        document.addEventListener("DOMContentLoaded", event => { 
+            chainz(document.querySelector('body'), tree).then(elementsTree => {
+                console.dir(elementsTree);
+            }).catch(e => {
+                console.log(e);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
